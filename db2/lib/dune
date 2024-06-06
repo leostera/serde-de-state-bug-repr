@@ -1,3 +1,4 @@
 (library
  (public_name db2)
- (libraries serde))
+ (preprocess (pps serde_derive))
+ (libraries serde serde_derive serde_json))
