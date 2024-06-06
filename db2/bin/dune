@@ -1,4 +1,0 @@
-(executable
- (public_name db2)
- (name main)
- (libraries db2))
