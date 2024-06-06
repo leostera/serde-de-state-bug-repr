@@ -1,5 +1,3 @@
-
-
 (* TODO: move all the Connection.t contents (driver,config) back out into Silo.t *)
 (* this is the wrong abstraction because FakeDB can't reference itself *)
 (* so FakeDB cannot create a connection that holds a reference to the FakeDB module *)
@@ -49,7 +47,7 @@ end
 module FakeDB = struct
   type config = { port : int }
 
-  let connect _config = DbCaml.Connection.make ()
+  let connect config driver = DbCaml.Connection.make ~config ~driver
 end
 
 module Silo = struct

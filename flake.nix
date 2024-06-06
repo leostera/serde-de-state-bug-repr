@@ -36,7 +36,7 @@
           devShells = {
             default = mkShell {
               buildInputs = [
-                ocamlPackages.opam
+                pkgs.opam
                 ocamlPackages.dune_3
                 ocamlPackages.ocaml
                 ocamlPackages.utop
