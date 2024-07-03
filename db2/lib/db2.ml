@@ -13,8 +13,7 @@ module DbCaml = struct
       val connect : config -> Connection.t
 
       val deserialize :
-        'state 'value.
-        ('value, 'state) Serde.De.t -> string -> ('value, Serde.error) result
+        'value Serde.De.t -> string -> ('value, Serde.error) result
     end
 
     type 'config t = (module Intf with type config = 'config)
